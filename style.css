@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #090909;
+    --font-color: #ffffff;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-family: "Titillium Web", "sans-serif";
+    background-image: url(./images/stars-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-color);
+}
+
+.img-album {
+    border: solid 10px var(--font-color);
+    margin-top: 7%;
+    width: 300px;
+    height: 300px;
+}
+
+.music-author-name {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.duration {
+    width: 300px;
+    margin-top: 25px;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 6px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+progress {
+    height: 6px;
+    width: 0;
+    cursor: pointer;
+}
+
+.point {
+    background-color: #eee;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: -10px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.players {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.play-btn,
+.pause-btn {
+    font-size: 55px;
+    position: absolute;
+
+    padding: 1rem 1rem;
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 45px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.pause-btn:active,
+.play-btn:active,
+.arrow:active {
+    transform: scale(0.9);
+    transition: transform 0.2s;
+}
+
+.pause-btn {
+    display: none;
+}
